@@ -43,7 +43,7 @@ const Navbar = () => {
       <div className="navbar-start">
         <div>
           <h4 className="md:text-2xl md:font-bold flex justify-center items-center">
-            <span className="text-orange-600 flex justify-center items-center">
+            <span className="text-[#5f17eef1] flex justify-center items-center">
               <LiaUniversitySolid></LiaUniversitySolid> M-Unique
             </span>
             Study
@@ -70,7 +70,7 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 
 			  z-[1] p-2 
-			  shadow bg-base-100 rounded-box w-52"
+			  shadow bg-base-100 b rounded-box w-52"
           >
             {navLinks}
           </ul>
@@ -90,12 +90,14 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleLogOut}
-              className="rounded-lg py-1 bg-base-300 px-5"
+              className="rounded-lg btn-primary py-1 bg-base-300 px-5"
             >
               Logout
             </button>
           ) : (
-            <button className="rounded-lg py-1 bg-base-300 px-5">Login</button>
+            <button className="rounded-lg btn-primary py-1 bg-base-300 px-5">
+              Login
+            </button>
           )}
         </Link>
       </div>

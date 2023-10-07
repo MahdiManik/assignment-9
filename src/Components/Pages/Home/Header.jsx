@@ -6,13 +6,13 @@ const Header = () => {
         backgroundImage: "url(https://i.ibb.co/mXXzDWq/banner.jpg)",
       }}
     >
-      <div className="hero-overlay bg-sky-300 bg-opacity-80 rounded-lg"></div>
+      <div className="hero-overlay bg-gray-300 bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="">
-          <h1 className="mb-5 text-5xl font-bold text-orange-600">
+          <h1 className="mb-5 text-5xl font-bold text-[#4701d4fd]">
             Personalized Study Abroad Counselling <br /> For Students
           </h1>
-          <p className="mb-5 text-orange-600 text-lg font-semibold">
+          <p className="mb-5 text-[#4605c6f1] text-lg font-semibold">
             How does one make education and learning a fun practice? The answer
             is through events, summits, and conferences. <br /> While these
             events may seem like a break from the monotonous study patterns in
@@ -28,9 +28,7 @@ const Header = () => {
               placeholder="Search Categories
 			  "
             />
-            <button className="btn btn-primary border-0 bg-orange-700">
-              Search
-            </button>
+            <button className="btn btn-primary">Search</button>
           </div>
         </div>
       </div>

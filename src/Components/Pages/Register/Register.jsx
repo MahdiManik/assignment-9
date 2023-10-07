@@ -21,10 +21,12 @@ const Register = () => {
   };
   return (
     <>
-      <div className="hero min-h-screen bg-yellow-50">
+      <div className="hero min-h-screen bg-orange-50">
         <div className="hero-content flex-col w-full gap-8">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl font-bold">Please Register</h1>
+            <h1 className="text-4xl text-[#5f17eef1] font-bold">
+              Please Register
+            </h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm max-h-screen shadow-2xl bg-base-100">
             <form onSubmit={handleRegister} className="card-body">
@@ -66,17 +68,18 @@ const Register = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button
-                  type="submit"
-                  className="btn btn-primary border-0 bg-orange-700"
-                >
+                <button type="submit" className="btn btn-primary">
                   Register
                 </button>
               </div>
             </form>
             <p className="pb-8 px-8">
               Already have an account?
-              <Link className="underline text-orange-500 pl-2" to={"/login"}>
+              <Link
+                className="font-semibold py-2 rounded-lg 
+				text-orange-50 ml-4 px-5 bg-[#5f17eef1]"
+                to={"/login"}
+              >
                 Login
               </Link>
             </p>
