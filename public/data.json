@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Online Education",
+    "image": "https://i.ibb.co/yNG77q8/education.jpg",
+    "description": "Get access to a wide range of online courses and educational resources from the comfort of your home.",
+    "price": "$49.99"
+  },
+  {
+    "id": 2,
+    "title": "Online & Offline Courses",
+    "image": "https://i.ibb.co/NFpYCJJ/background-study.jpg",
+    "description": "Choose from a variety of courses that can be taken both online and offline, allowing for flexible learning options.",
+    "price": "$69.99"
+  },
+  {
+    "id": 3,
+    "title": "Educational Conference & Seminar",
+    "image": "https://i.ibb.co/MDCxtLL/audience-raising.jpg",
+    "description": "Participate in educational conferences and seminars featuring industry experts and thought leaders.",
+    "price": "Free"
+  },
+  {
+    "id": 4,
+    "title": "Distant Learning",
+    "image": "https://i.ibb.co/BVHKY6b/young-woman.jpg",
+    "description": "Experience distant learning programs designed to provide high-quality education regardless of your location.",
+    "price": "$59.99"
+  },
+  {
+    "id": 5,
+    "title": "Special Training",
+    "image": "https://i.ibb.co/PCnhf78/daily-life.jpg",
+    "description": "Receive specialized training in specific fields or skills with personalized coaching and support.",
+    "price": "$79.99"
+  },
+  {
+    "id": 6,
+    "title": "Computer Science Courses",
+    "image": "https://i.ibb.co/PTgbM7R/copewuter.jpg",
+    "description": "Enroll in computer science courses covering various topics, including programming, algorithms, and more.",
+    "price": "$89.99"
+  }
+]
