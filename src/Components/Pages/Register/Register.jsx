@@ -1,43 +1,85 @@
+import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, logOut } = useContext(AuthContext);
+  const [error, setError] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(e.currentTarget);
     const form = new FormData(e.currentTarget);
 
     const name = form.get("name");
-    const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(email, password, photo, name);
-    createUser(email, password)
-      .then((result) => console.log(result))
-      .catch((error) => console.error(error));
+    const photo = form.get("photo");
+    console.log(email, password, name, photo);
+
+    if (
+      !/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?/~\\-]).{6,}$/.test(password)
+    ) {
+      setError(
+        "At least one uppercase letter, At least one special character, A minimum length of 6 characters"
+      );
+    } else {
+      setError("");
+
+      createUser(email, password)
+        .then((result) => {
+          console.log(result.user);
+          Swal.fire({
+            title: "Sweet!",
+            text: "Registration successful.",
+            imageUrl:
+              "https://i.ibb.co/0qPwzsm/8595c4eafa8f5a482d2b0a5d8b414459-youre-welcome.jpg",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Welcome image",
+          });
+        })
+
+        .catch((error) => console.error(error));
+    }
   };
+  logOut();
   return (
     <>
-      <div className="hero min-h-screen bg-orange-50">
+      <div className="hero my-20 ">
         <div className="hero-content flex-col w-full gap-8">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl text-[#5f17eef1] font-bold">
+            <p className="text-red-600  pb-6">{error}</p>
+
+            <h1 className="text-4xl text-center text-[#000000] font-bold">
               Please Register
             </h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm max-h-screen shadow-2xl bg-base-100">
-            <form onSubmit={handleRegister} className="card-body">
+            <form
+              onSubmit={handleRegister}
+              className="card-body bg-white shadow-2xl"
+            >
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
                 <input
-                  type="name"
+                  type="text"
                   name="name"
                   placeholder="name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URl</span>
+                </label>
+                <input
+                  type="url"
+                  name="photo"
+                  placeholder="Photo url"
                   className="input input-bordered"
                   required
                 />
@@ -68,16 +110,20 @@ const Register = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">
+                <button
+                  type="submit"
+                  className="flex justify-center items-center gap-2 mt-auto hover:text-white
+			  hover:bg-[#041e42] border-2 py-2 px-6 text-[#041e42] rounded-xl border-[#041e42]"
+                >
                   Register
                 </button>
               </div>
             </form>
-            <p className="pb-8 px-8">
+            <p className="pb-8 px-6 text-[#041e42] bg-white">
               Already have an account?
               <Link
-                className="font-semibold py-2 rounded-lg 
-				text-orange-50 ml-4 px-5 bg-[#5f17eef1]"
+                className="ml-6 mt-auto hover:text-white
+				hover:bg-[#041e42] border-2 py-2 px-6 text-[#041e42] rounded-xl border-[#041e42]"
                 to={"/login"}
               >
                 Login

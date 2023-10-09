@@ -18,38 +18,36 @@ const Navbar = () => {
         <NavLink to="/events">Events</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/apply">Apply</NavLink>
       </li>
       <li>
         <NavLink to="/register">Register</NavLink>
+      </li>
+      <li>
+        <NavLink to="/login">Login</NavLink>
       </li>
     </>
   );
 
   const handleLogOut = () => {
-    logOut()
-      .then(() => {
-        console.log("Sign-out successful");
-        alert("Sign-out successful");
-      })
-      .catch((error) => {
-        console.error(error);
-        alert(error.message);
-      });
+    logOut();
   };
 
   return (
-    <div className="navbar bg-orange-50">
+    <div className="navbar bg-[#ffffff]">
       <div className="navbar-start">
         <div>
-          <h4 className="md:text-2xl md:font-bold flex justify-center items-center">
-            <span className="text-[#5f17eef1] flex justify-center items-center">
-              <LiaUniversitySolid></LiaUniversitySolid> M-Unique
+          <h4 className="md:text-2xl font-bold flex justify-center items-center">
+            <span className="text-[#041e42] text-4xl flex justify-center items-center">
+              <LiaUniversitySolid></LiaUniversitySolid>
             </span>
-            Study
+            <span className="text-[#041e42] flex justify-center items-center">
+              M-Unique
+            </span>{" "}
+            -Study
           </h4>
         </div>
-        <div className="dropdown">
+        <div className="dropdown bg">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,21 +67,21 @@ const Navbar = () => {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 
-			  z-[1] p-2 
-			  shadow bg-base-100 b rounded-box w-52"
+			  z-[1] p-4 font-bold
+			  shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+      <div className="navbar-center hidden bg-[#041e42] text-[#ffffff] rounded-full px-10 lg:flex">
+        <ul className="menu menu-horizontal font-semibold">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        {user && <p className="text-lg font-semibold">{user.user_name}</p>}
+        {user && <p className="text-lg font-semibold">{user?.displayName}</p>}
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            {user ? <img src={user.photo_url} /> : <img src={userPic} alt="" />}
+            {user ? <img src={user?.photoURL} /> : <img src={userPic} alt="" />}
           </div>
         </label>
         <Link to={"/login"}>

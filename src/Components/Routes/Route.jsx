@@ -5,6 +5,9 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import Services from "../Pages/Services/Services";
 import Events from "../Pages/Events/Events";
+import ServiceDetails from "../Pages/Services/ServiceDetails";
+import PrivateRoutes from "./PrivateRoutes";
+import Apply from "../Pages/Applay/Apply";
 
 const myRouts = createBrowserRouter([
   {
@@ -25,12 +28,32 @@ const myRouts = createBrowserRouter([
       },
       {
         path: "/services",
-        loader: () => fetch("/data.json"),
         element: <Services></Services>,
       },
       {
         path: "/events",
-        element: <Events></Events>,
+        element: (
+          <PrivateRoutes>
+            <Events></Events>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/service/:id",
+        loader: () => fetch("/data.json"),
+        element: (
+          <PrivateRoutes>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/apply",
+        element: (
+          <PrivateRoutes>
+            <Apply></Apply>
+          </PrivateRoutes>
+        ),
       },
     ],
   },

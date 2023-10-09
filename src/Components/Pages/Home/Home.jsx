@@ -1,14 +1,16 @@
-import Footer from "../../Shared/Footer/Footer";
+import Services from "../Services/Services";
 import Header from "./Header";
-import Hero from "./Hero";
 
 const Home = () => {
   return (
-    <div>
-      <Header></Header>
-      <Hero></Hero>
-      <Footer></Footer>
-    </div>
+    <>
+      <div className="pt-8">
+        <Header></Header>
+        <div className="max-w-6xl mx-auto">
+          <Services></Services>
+        </div>
+      </div>
+    </>
   );
 };
 

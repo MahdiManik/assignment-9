@@ -1,18 +1,30 @@
+import { useEffect } from "react";
 import eventOne from "../../../assets/event-1.jpg";
 import eventTwo from "../../../assets/event-4.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: "1000", delay: "100" });
+    AOS.refresh();
+  }, []);
   return (
     <>
       {/* section one */}
 
-      <div className="hero pt-32 bg-orange-50">
+      <div className="hero pt-24 text-[#000000] bg-[#ffffff]">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={eventOne} className="max-w-xl rounded-lg shadow-2xl" />
-          <div>
-            <h1 className="text-4xl text-[#341f97] font-bold">
+          <img
+            data-aos="zoom-in-right"
+            src={eventOne}
+            className="md:max-w-xl rounded-lg shadow-2xl"
+          />
+          <div className="p-4">
+            <h1 className="md:text-4xl  font-semibold md:font-bold">
               Top Academic Events Around the World in 2023
             </h1>
-            <p className="py-6 text-[#341f97]">
+            <p className="py-6 text-[#370000]">
               Learning is a fun process but not all of us may enjoy it. Sure,
               learning can be done in many ways. Some people prefer learning
               through theory and others, through practice. Whatever method you
@@ -24,21 +36,24 @@ const Hero = () => {
               <br /> <br /> Symposium – Symposiums are events where experts in
               the field give presentations to an audience. Due to the pandemic,
             </p>
-            <button className="btn btn-primary">Join Us</button>
           </div>
         </div>
       </div>
 
       {/* section two */}
 
-      <div className="hero pt-32  bg-orange-50">
+      <div className="hero pt-14 bg-[#ffffff] text-[#000000]">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src={eventTwo} className="max-w-xl rounded-lg shadow-2xl" />
-          <div>
-            <h1 className="text-4xl font-bold text-[#341f97]">
+          <img
+            data-aos="zoom-in-left"
+            src={eventTwo}
+            className="md:max-w-xl rounded-lg shadow-2xl"
+          />
+          <div className="p-4">
+            <h1 className="md:text-4xl text-lg font-semibold md:font-bold ">
               What Are The Types Of Educational Events?
             </h1>
-            <p className="py-6 text-[#341f97]">
+            <p className="py-6 text-[#370000]">
               Conferences – Conferences are large events that bring together
               education professionals in the field of study. Activities at these
               events include speakers, workshops, and networking sessions. The
@@ -50,7 +65,6 @@ const Hero = () => {
               only includes delegates, representatives and members of a board or
               committee.
             </p>
-            <button className="btn btn-primary">Join Us</button>
           </div>
         </div>
       </div>
