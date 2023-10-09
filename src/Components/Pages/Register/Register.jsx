@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-  const { createUser, logOut } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   const [error, setError] = useState("");
 
   const handleRegister = (e) => {
@@ -43,7 +43,7 @@ const Register = () => {
         .catch((error) => console.error(error));
     }
   };
-  logOut();
+
   return (
     <>
       <div className="hero my-20 ">
