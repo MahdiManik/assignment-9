@@ -7,12 +7,14 @@ import Services from "../Pages/Services/Services";
 import Events from "../Pages/Events/Events";
 import ServiceDetails from "../Pages/Services/ServiceDetails";
 import PrivateRoutes from "./PrivateRoutes";
-import Apply from "../Pages/Applay/Apply";
+import Apply from "../Pages/Apply/Apply";
+import Error from "../Pages/Error/Error";
 
 const myRouts = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",

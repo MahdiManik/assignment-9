@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### B
 
-<i>Write your explanation here</i>
+<i>Not Declared (greetign) but declared (greeting) </i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### D
 
-<i>Write your explanation here</i>
+<i>When we use the + operator in JavaScript to combine two values, JavaScript will try to apply type coercion to change the operands to the same type. Here, "2" is a string and 1 is an integer.</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### A
 
-<i>Write your explanation here</i>
+<i>because this is value of food, we set this, after no any change value of the food</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### B
 
-<i>Write your explanation here</i>
+<i>In this we return (Hi there) in template string, this is a string, for this he show, and {name} used in template string with $ and secund becket and this is parameter of the function and don't set value for this, for this he show output is undefined</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### D
 
-<i>Write your explanation here</i>
+<i>The forEach method iterates over each element in the nums array. In JavaScript, 0 is considered a falsy value, while all other numbers are truthy.</i>
 
 </p>
 </details>

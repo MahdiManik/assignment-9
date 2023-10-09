@@ -1,8 +1,19 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Some Faetures of my project
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## Features
+
+- setedit with Firebase Login with Email and password and with google and Register with email and password.
+
+- tuggle in login form to Register form, and Register to login from.
+
+- This project is single page web site.
+ 
+- In this project also have a Private rout,
+  one is service details page who open with     button of service card, and two extra Private routs, name with (event) and (apply)
+  
+- almost all button functionally created.
+
