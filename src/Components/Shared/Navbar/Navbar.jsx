@@ -14,12 +14,16 @@ const Navbar = () => {
       <li>
         <NavLink to="/services">Services</NavLink>
       </li>
-      <li>
-        <NavLink to="/events">Events</NavLink>
-      </li>
-      <li>
-        <NavLink to="/apply">Apply</NavLink>
-      </li>
+      {user && (
+        <li>
+          <NavLink to="/events">Events</NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink to="/apply">Apply</NavLink>
+        </li>
+      )}
       <li>
         <NavLink to="/register">Register</NavLink>
       </li>

@@ -25,7 +25,7 @@ const Header = () => {
                 <LiaUniversitySolid></LiaUniversitySolid>
               </span>
               <span className=" flex justify-start items-center text-md">
-                M-UniqueStudy Global
+                M-Unique-Study Global
               </span>
             </h4>
           </div>

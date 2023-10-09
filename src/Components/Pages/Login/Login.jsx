@@ -50,6 +50,15 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        Swal.fire({
+          title: "Great job!",
+          text: "Sign-in successful.",
+          imageUrl:
+            "https://i.ibb.co/0qPwzsm/8595c4eafa8f5a482d2b0a5d8b414459-youre-welcome.jpg",
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: "Welcome image",
+        });
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => console.error(err.message));
@@ -101,7 +110,7 @@ const Login = () => {
                   className="flex justify-center items-center gap-2 mt-auto hover:text-white
 			  hover:bg-[#041e42] border-2 py-2 px-6 text-[#041e42] rounded-xl border-[#041e42]"
                 >
-                  Register
+                  Login
                 </button>
               </div>
             </form>

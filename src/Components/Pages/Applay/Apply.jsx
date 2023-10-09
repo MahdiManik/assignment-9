@@ -1,8 +1,14 @@
+import { Link } from "react-router-dom";
+import student from "../../../assets/college.jpg";
+import register from "../../../assets/smiling.jpg";
+import { HiArrowRight } from "react-icons/hi";
+
 const Apply = () => {
   return (
-    <div className="">
+    <div className="mt-20">
       <div className="">
         <img
+          src={student}
           data-aos="zoom-in"
           className="md:w-full relative top-0 bottom-0 left-0 md:h-[700px]"
           alt=""
@@ -20,25 +26,64 @@ const Apply = () => {
             </p>
             <h1
               className="text-5xl font-bold bg-[#001335] 
-	  text-white p-8 rounded-xl"
+	  text-white p-8 rounded-xl leading-tight"
             >
-              January 2024 Intake
+              Begin your UK Masters <br /> in January 2024
             </h1>
             <div>
               <p
                 className="font-semibold text-white py-6 px-16 rounded-b-xl 
 	  bg-[#0b1d3c] leading-8 mb-4"
               >
-                Looking to study in the UK? Find your perfect <br />
-                postgraduate course at M-Unique-Study.
+                Choose from over 35 Masters including computing, <br />{" "}
+                engineering, law, business, accounting and <br /> international
+                hospitality.
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="hero pt-24 text-[#000000] bg-[#ffffff]">
+        <div className="hero-content flex-col lg:flex-row">
+          <img
+            data-aos="zoom-in-right"
+            src={register}
+            className="md:max-w-xl h-96 rounded-lg shadow-2xl"
+          />
+          <div className="p-4">
+            <h1 className="md:text-5xl  font-bold md:font-bold">
+              Register your interest
+            </h1>
+            <p className="py-6 mb-8 text-[#370000]">
+              Sign up to find out more about starting your studies at
+              M-Unique-Study in January 2024.
+              <br />
+              <br />
+              Get the latest information on events happening online and where
+              you are!
+            </p>
+            <Link
+              to={"/register"}
+              className="flex items-center gap-2 mt-auto hover:text-white
+			  hover:bg-[#041e42] border-2 py-4 w-80 font-bold text-center justify-center text-[#041e42] rounded-xl border-[#041e42]"
+            >
+              REGISTER YOUR INTEREST
+              <span
+                className=" flex hover:text-white ml-3 hover:bg-[#0b1d3c]  text-xl 
+		font-bold"
+              >
+                <HiArrowRight></HiArrowRight>
+              </span>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <h4 className="text-5xl font-bold mt-16 bg-[#f4f4f4] text-center p-6 text-[#001335]">
+        Our Events
+      </h4>
       <div className="bg-[#07254e] h-[550px]  w-full ">
-        <div className="  grid grid-cols-3 mt-16 pt-16 items-center max-w-6xl mx-auto">
+        <div className="  grid grid-cols-3  pt-16 items-center max-w-6xl mx-auto">
           <div className="col-span-2">
             <h3
               className=" py-3 px-8 w-3/5 text-[#ffffff]

@@ -1,16 +1,43 @@
+import { FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
+
+import { LiaUniversitySolid } from "react-icons/lia";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
+      <footer className="footer p-16 bg-[#041e42] text-white">
         <aside>
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
-          </p>
+          <h4 className="md:text-2xl mb-6 font-bold flex justify-center items-center">
+            <span className="text-red-400 text-4xl flex justify-center items-center">
+              <LiaUniversitySolid></LiaUniversitySolid>
+            </span>
+            <span className="text-red-400 flex justify-center items-center">
+              M-Unique
+            </span>{" "}
+            -Study social
+          </h4>
+          <div>
+            <p className="font-semibold mb-3 text-md flex">
+              @M-Unique-Study
+              <span className="text-2xl ml-1 font-bold">
+                <FiFacebook></FiFacebook>
+              </span>
+            </p>
+            <p className="font-semibold mb-3 text-md flex">
+              @M-Unique-Study
+              <span className="text-2xl ml-2 font-bold">
+                <FiInstagram></FiInstagram>
+              </span>
+            </p>
+            <p className="font-semibold mb-3 text-md flex">
+              @M-Unique-Study
+              <span className="text-2xl ml-2 font-bold">
+                <FiLinkedin></FiLinkedin>
+              </span>
+            </p>
+          </div>
         </aside>
         <nav>
-          <header className="footer-title">Services</header>
+          <header className="footer-title text-white">Services</header>
           <a className="link link-hover">Branding</a>
           <a className="link link-hover">Design</a>
           <a className="link link-hover">Marketing</a>
